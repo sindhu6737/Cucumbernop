@@ -1,0 +1,374 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 09 12:37:24 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>197 seconds (197944 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestNGRunners.loginTests.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.loginTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login is successful with valid credentials", "Optional[feature to test login functionality]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[text()=&apos;Welcome to our store&apos;]&quot;}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;IVL-WS131&apos;, ip: &apos;10.0.12.34&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34c4dcea1d32994d0c4e40593df0aa5f, findElement {using=xpath, value=//h2[text()=&apos;Welcome to our store&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\SINDHU~1.NAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58243/devtoo..., se:cdpVersion: 96.0.4664.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 34c4dcea1d32994d0c4e40593df0aa5f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.getText(Unknown Source)
+	at automation.loginAutomation.user_should_be_on_home_page(loginAutomation.java:61)
+	at ?.User should be on home page(file:///C:/Users/Sindhu.Naik/eclipse-workspace/Cucumbernop/src/test/resources/Features/login.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2034546868", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2034546868'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[text()=&apos;Welcome to our store&apos;]&quot;}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;IVL-WS131&apos;, ip: &apos;10.0.12.34&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34c4dcea1d32994d0c4e40593df0aa5f, findElement {using=xpath, value=//h2[text()=&apos;Welcome to our store&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\SINDHU~1.NAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58243/devtoo..., se:cdpVersion: 96.0.4664.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 34c4dcea1d32994d0c4e40593df0aa5f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.getText(Unknown Source)
+	at automation.loginAutomation.user_should_be_on_home_page(loginAutomation.java:61)
+	at ?.User should be on home page(file:///C:/Users/Sindhu.Naik/eclipse-workspace/Cucumbernop/src/test/resources/Features/login.feature:12)
+</pre></div></td>
+<td>23</td>
+<td>TestNGRunners.loginTests@5a3bc7ed</td></tr>
+<tr>
+<td title='TestNGRunners.cartTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.cartTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check delete item from cart", "Optional[Check Shopping cart functionality]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@title=&apos;Show details for Nike Tailwind Loose Short-Sleeve Running Shirt&apos;]&quot;}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;IVL-WS131&apos;, ip: &apos;10.0.12.34&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d593c7778a19948bf484c56fa68f8c8, findElement {using=xpath, value=//img[@title=&apos;Show details for Nike Tailwind Loose Short-Sleeve Running Shirt&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\SINDHU~1.NAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58546}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58546/devtoo..., se:cdpVersion: 96.0.4664.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d593c7778a19948bf484c56fa68f8c8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
+	at automation.shoppingCartAutomation.user_clicks_on_remove_option(shoppingCartAutomation.java:98)
+	at ?.user clicks on remove option(file:///C:/Users/Sindhu.Naik/eclipse-workspace/Cucumbernop/src/test/resources/Features/addToCart.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace548828006", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace548828006'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@title=&apos;Show details for Nike Tailwind Loose Short-Sleeve Running Shirt&apos;]&quot;}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;IVL-WS131&apos;, ip: &apos;10.0.12.34&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d593c7778a19948bf484c56fa68f8c8, findElement {using=xpath, value=//img[@title=&apos;Show details for Nike Tailwind Loose Short-Sleeve Running Shirt&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\SINDHU~1.NAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58546}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58546/devtoo..., se:cdpVersion: 96.0.4664.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d593c7778a19948bf484c56fa68f8c8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
+	at automation.shoppingCartAutomation.user_clicks_on_remove_option(shoppingCartAutomation.java:98)
+	at ?.user clicks on remove option(file:///C:/Users/Sindhu.Naik/eclipse-workspace/Cucumbernop/src/test/resources/Features/addToCart.feature:25)
+</pre></div></td>
+<td>30</td>
+<td>TestNGRunners.cartTest@d771cc9</td></tr>
+<tr>
+<td title='TestNGRunners.loginTests.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.loginTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login with invalid password", "Optional[feature to test login functionality]"</td>
+<td><div><pre>java.lang.AssertionError: expected [The credentials provided are incorrect] but found [No customer account found]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at automation.loginAutomation.user_should_get_an_error_message_for_invalid_password(loginAutomation.java:95)
+	at ?.User should get an error message for invalid password(file:///C:/Users/Sindhu.Naik/eclipse-workspace/Cucumbernop/src/test/resources/Features/login.feature:24)
+</pre></div><a href='#' onClick='toggleBox("stack-trace893339434", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace893339434'><pre>java.lang.AssertionError: expected [The credentials provided are incorrect] but found [No customer account found]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at automation.loginAutomation.user_should_get_an_error_message_for_invalid_password(loginAutomation.java:95)
+	at ?.User should get an error message for invalid password(file:///C:/Users/Sindhu.Naik/eclipse-workspace/Cucumbernop/src/test/resources/Features/login.feature:24)
+</pre></div></td>
+<td>8</td>
+<td>TestNGRunners.loginTests@5a3bc7ed</td></tr>
+<tr>
+<td title='TestNGRunners.RegisterTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.RegisterTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check register for duplicate user", "Optional[User Registeration]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div[class=&apos;message-error validation-summary-errors&apos;] ul li&quot;}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;IVL-WS131&apos;, ip: &apos;10.0.12.34&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [71ceb116dd36866287ffe45184bb63b5, findElement {using=css selector, value=div[class=&apos;message-error validation-summary-errors&apos;] ul li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\SINDHU~1.NAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58458}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58458/devtoo..., se:cdpVersion: 96.0.4664.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 71ceb116dd36866287ffe45184bb63b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.getText(Unknown Source)
+	at automation.registerAutomation.user_gets_error(registerAutomation.java:246)
+	at ?.user gets error(file:///C:/Users/Sindhu.Naik/eclipse-workspace/Cucumbernop/src/test/resources/Features/registeration.feature:53)
+</pre></div><a href='#' onClick='toggleBox("stack-trace18392277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace18392277'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div[class=&apos;message-error validation-summary-errors&apos;] ul li&quot;}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;IVL-WS131&apos;, ip: &apos;10.0.12.34&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [71ceb116dd36866287ffe45184bb63b5, findElement {using=css selector, value=div[class=&apos;message-error validation-summary-errors&apos;] ul li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\SINDHU~1.NAI\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58458}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58458/devtoo..., se:cdpVersion: 96.0.4664.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 71ceb116dd36866287ffe45184bb63b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.getText(Unknown Source)
+	at automation.registerAutomation.user_gets_error(registerAutomation.java:246)
+	at ?.user gets error(file:///C:/Users/Sindhu.Naik/eclipse-workspace/Cucumbernop/src/test/resources/Features/registeration.feature:53)
+</pre></div></td>
+<td>24</td>
+<td>TestNGRunners.RegisterTest@5ef5c734</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestNGRunners.RegisterTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.RegisterTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check register with invalid password", "Optional[User Registeration]"</td>
+<td></td>
+<td>7</td>
+<td>TestNGRunners.RegisterTest@5ef5c734</td></tr>
+<tr>
+<td title='TestNGRunners.RegisterTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.RegisterTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check register for invalid email", "Optional[User Registeration]"</td>
+<td></td>
+<td>7</td>
+<td>TestNGRunners.RegisterTest@5ef5c734</td></tr>
+<tr>
+<td title='TestNGRunners.RegisterTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.RegisterTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check the register page", "Optional[User Registeration]"</td>
+<td></td>
+<td>7</td>
+<td>TestNGRunners.RegisterTest@5ef5c734</td></tr>
+<tr>
+<td title='TestNGRunners.RegisterTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.RegisterTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check register with valid input fields", "Optional[User Registeration]"</td>
+<td></td>
+<td>9</td>
+<td>TestNGRunners.RegisterTest@5ef5c734</td></tr>
+<tr>
+<td title='TestNGRunners.cartTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.cartTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check the URL", "Optional[Check Shopping cart functionality]"</td>
+<td></td>
+<td>6</td>
+<td>TestNGRunners.cartTest@d771cc9</td></tr>
+<tr>
+<td title='TestNGRunners.loginTests.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.loginTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login with unregistered user", "Optional[feature to test login functionality]"</td>
+<td></td>
+<td>6</td>
+<td>TestNGRunners.loginTests@5a3bc7ed</td></tr>
+<tr>
+<td title='TestNGRunners.cartTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.cartTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check shopping cart with products added", "Optional[Check Shopping cart functionality]"</td>
+<td></td>
+<td>21</td>
+<td>TestNGRunners.cartTest@d771cc9</td></tr>
+<tr>
+<td title='TestNGRunners.RegisterTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.RegisterTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check register for empty fields", "Optional[User Registeration]"</td>
+<td></td>
+<td>6</td>
+<td>TestNGRunners.RegisterTest@5ef5c734</td></tr>
+<tr>
+<td title='TestNGRunners.loginTests.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.loginTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login  with invalid username", "Optional[feature to test login functionality]"</td>
+<td></td>
+<td>6</td>
+<td>TestNGRunners.loginTests@5a3bc7ed</td></tr>
+<tr>
+<td title='TestNGRunners.searchTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.searchTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the search for the product which is not available", "Optional[search functionality]"</td>
+<td></td>
+<td>5</td>
+<td>TestNGRunners.searchTest@36b4091c</td></tr>
+<tr>
+<td title='TestNGRunners.RegisterTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.RegisterTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check register with different values for password and confirm password", "Optional[User Registeration]"</td>
+<td></td>
+<td>6</td>
+<td>TestNGRunners.RegisterTest@5ef5c734</td></tr>
+<tr>
+<td title='TestNGRunners.cartTest.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.cartTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check shopping cart with zero products", "Optional[Check Shopping cart functionality]"</td>
+<td></td>
+<td>6</td>
+<td>TestNGRunners.cartTest@d771cc9</td></tr>
+<tr>
+<td title='TestNGRunners.loginTests.runScenario()'><b>runScenario</b><br>Test class: TestNGRunners.loginTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login with empty fields", "Optional[feature to test login functionality]"</td>
+<td></td>
+<td>7</td>
+<td>TestNGRunners.loginTests@5a3bc7ed</td></tr>
+</table><p>
+</body>
+</html>

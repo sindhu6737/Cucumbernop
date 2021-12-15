@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test name="Surefire test">
+    <classes>
+      <class name="TestNGRunners.cartTest"/>
+      <class name="TestNGRunners.loginTests"/>
+      <class name="TestNGRunners.RegisterTest"/>
+      <class name="TestNGRunners.searchTest"/>
+    </classes>
+  </test> <!-- Surefire test -->
+  <test name="Surefire test(failed)">
+    <classes>
+      <class name="TestNGRunners.cartTest">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- TestNGRunners.cartTest -->
+      <class name="TestNGRunners.searchTest">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- TestNGRunners.searchTest -->
+      <class name="TestNGRunners.loginTests">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- TestNGRunners.loginTests -->
+      <class name="TestNGRunners.RegisterTest">
+        <methods>
+          <include name="runScenario" invocation-numbers="5"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- TestNGRunners.RegisterTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
